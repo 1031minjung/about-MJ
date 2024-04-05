@@ -1,0 +1,15 @@
+<div class="work-experience">
+    <div class="left">
+        <div class="date">{{data.date}}</div>
+    </div>
+    <div class="right">
+        <div class="work-title">
+            <span class="job-title">{{data.jobTitle}}</span>
+            <span class="center-dot">&#183;</span>
+            <span class="employer">{{data.employer}}</span>
+        </div>
+        <p class="job-note">{{data.jobNote}}</p>
+        <app-key-word [keywords]="data.keywords">
+        </app-key-word>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+.work-experience {
+    display: flex;
+    padding: 15px;
+    
+    &:hover {
+        background: #18274c;
+    }
+    .left {
+        min-width: 200px;
+        opacity: 0.5;
+    }
+    .right {
+        max-width: 450px;
+        .work-title {
+            opacity: 0.9;
+        }
+        .job-note {
+            opacity: 0.5;
+        }
+    }
+}

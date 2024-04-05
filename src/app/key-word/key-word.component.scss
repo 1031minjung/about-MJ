@@ -1,0 +1,15 @@
+.flex-display {
+    display: flex;
+    padding-top: 10px;
+    .key-words {
+        padding-right: 10px;
+        font-size: small;
+        .word {
+            background: #183656;
+            padding: 7px 11px;
+            border-radius: 14px;
+            color: #8bd5e0;
+        }
+    }
+}
+
