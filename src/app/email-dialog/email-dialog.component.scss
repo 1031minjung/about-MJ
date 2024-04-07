@@ -22,9 +22,14 @@
         display: flex;
         justify-content: space-between;
         padding: 0px 22px 10px;
-        .error-msg {
+        .messages {
             padding-top: 13px;
-            color: #FF4B4B;
+            .error-message {
+                color: #FF4B4B;
+            }
+            .success-message {
+                color: #5a8136;
+            }
         }
         .buttons {
             display: flex;

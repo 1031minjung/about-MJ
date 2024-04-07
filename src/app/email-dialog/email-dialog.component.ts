@@ -9,7 +9,8 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 export class EmailDialogComponent {
 
   emailStatus = null;
-  error = null;
+  errorMessage = null;
+  successMessage = null;
 
   constructor(
     public activeModal: NgbActiveModal
