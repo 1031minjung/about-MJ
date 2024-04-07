@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { jobSummary } from './summary';
+import { AppService } from './app.service';
 
 @Component({
   selector: 'app-root',
@@ -10,10 +11,14 @@ import { jobSummary } from './summary';
 export class AppComponent implements OnInit {
   jobData: any;
 
-  constructor() {}
+  constructor(public appService: AppService) {}
 
   ngOnInit() {
     this.jobData = jobSummary;
+  }
+
+  openPdfResume() {
+    window.open("assets/resume.pdf")
   }
   
 }

@@ -1,0 +1,58 @@
+.email-dialog {
+    color: black;
+    .modal-header {
+        display: flex;
+        justify-content: space-between;
+        button {
+            background: none;
+            border: none;
+            position: relative;
+            top: -10px;
+            right: -1px;
+        }
+    }
+    .modal-body {
+        display: flex;
+        flex-direction: column;
+        .email-message {
+            min-height: 250px;
+        }
+    }
+    .modal-custom-footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 22px 10px;
+        .error-msg {
+            padding-top: 13px;
+            color: #FF4B4B;
+        }
+        .buttons {
+            display: flex;
+            flex-shrink: 0;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: flex-end;
+            .cancel-button:hover {
+                cursor: pointer;
+                text-decoration: underline;
+            }
+            .submit-button.bi-envelope-arrow-up:hover {
+                cursor: pointer;
+            }
+            .submit-button.bi-envelope-arrow-up:hover::before {
+                content: '\F7B9';
+            }
+            .submit-button.bi-envelope-check-fill {
+                color: #5a8136;
+                cursor:auto;
+            }
+            .submit-button.bi-envelope-exclamation-fill {
+                color: #FF4B4B;
+                cursor:auto;
+            }
+            .cancel-button {
+                padding: 0 12px 7px;
+            }
+        }
+    }
+}

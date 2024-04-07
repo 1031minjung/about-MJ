@@ -1,8 +1,9 @@
 .work-experience {
     display: flex;
     padding: 15px;
-    
+    border-radius: 15px;
     &:hover {
+        cursor: default;
         background: #18274c;
     }
     .left {
@@ -13,6 +14,10 @@
         max-width: 450px;
         .work-title {
             opacity: 0.9;
+        }
+        .employer:hover {
+            cursor: pointer;
+            text-decoration: underline;
         }
         .job-note {
             opacity: 0.5;
