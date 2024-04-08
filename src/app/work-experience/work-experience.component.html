@@ -1,4 +1,8 @@
-<div class="work-experience">
+<div class="work-experience" 
+    [ngClass]="{
+        'dark-mode': appService.displayMode === 'dark',
+        'bright-mode': appService.displayMode === 'bright',
+    }">
     <div class="left">
         <div class="date">{{data.date}}</div>
     </div>

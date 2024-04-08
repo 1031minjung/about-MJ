@@ -4,7 +4,12 @@
     border-radius: 15px;
     &:hover {
         cursor: default;
+    }
+    &.dark-mode:hover {
         background: #18274c;
+    }
+    &.bright-mode:hover {
+        background: rgb(240, 240, 240);
     }
     .left {
         min-width: 200px;

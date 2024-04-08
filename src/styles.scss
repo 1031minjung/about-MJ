@@ -22,8 +22,6 @@
 
 body {
     scroll-behavior: smooth;
-    background: #0f172a;
-    color: white;
     font-family: 'Roboto';
     letter-spacing : .1rem;
     display: flex;
@@ -39,5 +37,14 @@ body {
     .center-dot {
         padding: 10px;
     }
+}
+
+body:has(.app-body.dark-mode) { 
+    background: #0f172a;
+    color: white;
+}
+body:has(.app-body.bright-mode) { 
+    background: white;
+    color: #0f172a;
 }
 

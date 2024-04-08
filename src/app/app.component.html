@@ -1,11 +1,14 @@
-<div class="app-body">
+<div class="app-body" [ngClass]="{
+  'dark-mode': appService.displayMode === 'dark',
+  'bright-mode': appService.displayMode === 'bright',
+}">
   <div class="left">
     <div class="header">
-      <h1 class="name">Min Jung Park</h1>
+      <h1 class="name">Hi, I am MJ!</h1>
       <h2 class="title">Frontend Engineer</h2>
       <p class="note">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam voluptas voluptatum tempora dolore facere impedit deleniti perferendis.</p>
     </div>
-    <app-links></app-links>
+    <app-links (isDisplayDarkMode)="toggleDisplay($event)"></app-links>
   </div>
   <div class="right">
     <p class="introduction">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam voluptas voluptatum tempora dolore facere impedit deleniti perferendis, aspernatur, magni ullam recusandae, sint asperiores dolores minima qui officia harum quis tempore.Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>

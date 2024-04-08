@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { AppService } from '../app.service';
 
 @Component({
   selector: 'app-key-word',
@@ -6,7 +7,9 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./key-word.component.scss']
 })
 export class KeyWordComponent {
-  
+
   @Input() keywords: string[];
+
+  constructor(public appService: AppService) {}
 
 }

@@ -1,5 +1,10 @@
 <div class="flex-display">
     <div *ngFor="let word of keywords" class="key-words">
-        <span class="word">{{word}}</span>
+        <span class="word"
+            [ngClass]="{
+                'dark-mode': appService.displayMode === 'dark',
+                'bright-mode': appService.displayMode === 'bright',
+            }">{{word}}
+        </span>
     </div>
 </div>

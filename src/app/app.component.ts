@@ -20,5 +20,12 @@ export class AppComponent implements OnInit {
   openPdfResume() {
     window.open("assets/resume.pdf")
   }
-  
+
+  toggleDisplay(event: Event) {
+    if (event) {
+      this.appService.displayMode = 'dark'
+    } else {
+      this.appService.displayMode = 'bright'
+    }
+  }
 }

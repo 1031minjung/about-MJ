@@ -5,11 +5,18 @@
         padding-right: 10px;
         font-size: small;
         .word {
-            background: #183656;
             padding: 7px 11px;
             border-radius: 14px;
-            color: #8bd5e0;
+            &.dark-mode {
+                background: #183656;
+                color: #8bd5e0;
+            }
+            &.bright-mode {
+                background: rgb(221, 231, 242);
+                color: darkslategrey;
+            }
         }
+        
     }
 }
 
