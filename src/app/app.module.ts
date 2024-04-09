@@ -9,7 +9,7 @@ import { AppService } from './app.service';
 import { EmailDialogComponent } from './email-dialog/email-dialog.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
-
+import { NgxGoogleAnalyticsModule } from 'ngx-google-analytics';
 
 @NgModule({
   declarations: [
@@ -23,7 +23,8 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FormsModule
+    FormsModule,
+    NgxGoogleAnalyticsModule.forRoot('G-5N4FL2PCPL')
   ],
   providers: [AppService],
   bootstrap: [AppComponent]
