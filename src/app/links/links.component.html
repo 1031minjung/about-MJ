@@ -1,16 +1,10 @@
 <div class="links">
-    <div><h1 class="bi bi-linkedin" (click)="appService.openLink('https://www.linkedin.com/in/1031minjung/')"></h1></div>
-    <div><h1 class="bi bi-github" (click)="appService.openLink('https://github.com/1031minjung')"></h1></div>
-    <div><h1 class="bi bi-code-square"></h1></div>
-    <div><h1 class="bi bi-envelope-at-fill" (click)="openModal()"></h1></div>
+    <div><h1 class="bi bi-linkedin" (click)="appService.openLink('https://www.linkedin.com/in/1031minjung/')" title="open LinkedIn"></h1></div>
+    <div><h1 class="bi bi-github" (click)="appService.openLink('https://github.com/1031minjung')" title="open GitHub"></h1></div>
+    <div><h1 class="bi bi-code-square" title="open CodePen"></h1></div>
+    <div><h1 class="bi bi-envelope-at-fill" (click)="openModal()" title="send MJ an email"></h1></div>
     <div>
-        <h1 *ngIf="!isDarkMode" class="bi bi-moon-fill" (click)="toggleDisplayMode()"></h1>
-        <h1 *ngIf="isDarkMode" class="bi bi-sun-fill" (click)="toggleDisplayMode()"></h1>
+        <h1 *ngIf="!isDarkMode" class="bi bi-moon-fill" (click)="toggleDisplayMode()" title="change display to Dark Mode"></h1>
+        <h1 *ngIf="isDarkMode" class="bi bi-sun-fill" (click)="toggleDisplayMode()" title="change display to Bright Mode"></h1>
     </div>
 </div>
-
-
-
-  
-
-

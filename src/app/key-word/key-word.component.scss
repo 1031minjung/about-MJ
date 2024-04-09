@@ -1,6 +1,11 @@
 .flex-display {
     display: flex;
     padding-top: 10px;
+    @media only screen and (max-width: 599px) {
+        display: grid;
+        grid-template-columns: 110px 110px;
+        gap: 10px;
+    }
     .key-words {
         padding-right: 10px;
         font-size: small;
@@ -16,7 +21,5 @@
                 color: darkslategrey;
             }
         }
-        
     }
 }
-

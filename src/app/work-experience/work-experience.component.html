@@ -12,7 +12,7 @@
             <span class="center-dot">&#183;</span>
             <span class="department">{{data.department}}</span>
             <br>
-            <span class="employer" (click)="appService.openLink(data.link)">{{data.employer}} <i class="bi bi-box-arrow-up-right"></i>
+            <span class="employer" (click)="appService.openLink(data.link)" title="visit {{data.employer}}">{{data.employer}} <i class="bi bi-box-arrow-up-right"></i>
             </span>
         </div>
         <p class="job-note">{{data.jobNote}}</p>

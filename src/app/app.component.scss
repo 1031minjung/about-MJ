@@ -1,13 +1,42 @@
 .app-body {
-    display: flex;
     height: 92vh;
     margin: 20px 5px;
+    @media only screen and (min-width: 1000px) {
+        display: flex;
+        .left {
+            height: 92vh;
+            justify-content: space-between;
+            flex: 0 0 auto;
+        }
+        .right {
+            flex: 1 1 auto;
+            overflow: auto;
+            .introduction,
+            .about-portfolio {
+                padding: 0px 15px 20px;
+                max-width: 650px;
+            }
+        }
+    }
+    @media only screen and (max-width: 999px) {
+        padding: 10px 30px;
+    }
+    @media only screen and (max-width: 699px) {
+        padding-bottom: 35px;
+        .left {
+            .note {
+                padding-bottom: 20px;
+            }
+        }
+        .right {
+            .introduction {
+                padding: 20px 0 30px;
+            }
+        }
+    }
     .left {
-        flex: 0 0 auto;
-        height: 92vh;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
         .name {
             margin-bottom: 0;
         }
@@ -24,7 +53,6 @@
         flex: 1 1 auto;
         overflow: auto;
         padding-top: 12px;
-
         .pdf-resume {
             padding: 20px 15px 20px;
             &:hover {
@@ -34,8 +62,6 @@
         }
         .introduction,
         .about-portfolio {
-            padding: 0px 15px 20px;
-            max-width: 650px;
             opacity: 0.7;
         }
     }

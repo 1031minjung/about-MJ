@@ -1,22 +1,35 @@
 .work-experience {
-    display: flex;
-    padding: 15px;
     border-radius: 15px;
+    @media only screen and (min-width: 1000px) {
+        padding: 15px;
+        .right {
+            max-width: 450px;
+        }
+    }
+    @media only screen and (min-width: 700px) {
+        display: flex;
+        &.dark-mode:hover {
+            background: #18274c;
+        }
+        &.bright-mode:hover {
+            background: rgb(240, 240, 240);
+        }
+    }
+    @media only screen and (max-width: 999px) {
+        margin-bottom: 35px;
+    }
+    @media only screen and (max-width: 699px) {
+        margin-bottom: 55px;
+    }
     &:hover {
         cursor: default;
-    }
-    &.dark-mode:hover {
-        background: #18274c;
-    }
-    &.bright-mode:hover {
-        background: rgb(240, 240, 240);
     }
     .left {
         min-width: 200px;
         opacity: 0.5;
     }
     .right {
-        max-width: 450px;
+        
         .work-title {
             opacity: 0.9;
         }
