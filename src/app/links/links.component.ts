@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { AppService } from '../app.service';
-import { ModalDismissReasons, NgbDatepickerModule, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { EmailDialogComponent } from '../email-dialog/email-dialog.component';
 
 
@@ -11,7 +11,7 @@ import { EmailDialogComponent } from '../email-dialog/email-dialog.component';
 })
 export class LinksComponent {
 
-  isDarkMode = true;
+  isDarkMode = false;
   @Output() isDisplayDarkMode = new EventEmitter();
 
   constructor(
@@ -40,7 +40,7 @@ export class LinksComponent {
   }
 
   openOldPortfolio() {
-    alert('Please note:\nA lot of links are not working in the old portfolio since the projects were stored and have removed in the school system. But you could still visit and view what student MJ has done in the past!');
+    alert('Please note:\nA lot of projects are not available for live try in the this old portfolio since the projects were stored and have removed in the school system upon graduation. But you could still visit and view what student MJ has done in the past!');
     this.appService.openLink('https://minjungpark.site123.me/');
   }
 

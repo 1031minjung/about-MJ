@@ -42,10 +42,10 @@ body {
     }
 }
 body:has(.app-body.dark-mode) { 
-    background: #0f172a;
+    background: #363636;
     color: white;
 }
 body:has(.app-body.bright-mode) { 
-    background: white;
+    background: #fffefc;
     color: #0f172a;
 }

@@ -9,7 +9,7 @@
     @media only screen and (min-width: 700px) {
         display: flex;
         &.dark-mode:hover {
-            background: #18274c;
+            background: #4e4e4e;
         }
         &.bright-mode:hover {
             background: rgb(240, 240, 240);
@@ -35,7 +35,7 @@
     }
     .left {
         min-width: 200px;
-        opacity: 0.5;
+        opacity: 0.6;
     }
     .right {
         
@@ -47,7 +47,7 @@
             text-decoration: underline;
         }
         .job-note {
-            opacity: 0.5;
+            opacity: 0.6;
         }
     }
 }
