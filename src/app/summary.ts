@@ -9,7 +9,7 @@ export const jobSummary = [
         keywords: ['TypeScript', 'Angular', 'HTML', 'SCSS/CSS'],
         link: 'https://www.rogers.com/'
     }, {
-        date: '2019 Jan - 2019 Apr',
+        date: '2019 Sep - 2019 Dec',
         jobTitle: 'Junior Frontend Engineer',
         jobPosition: 'Co-Op Student',
         department: 'Digital Garage',
@@ -18,8 +18,8 @@ export const jobSummary = [
         keywords: ['JavaScript', 'React', 'HTML', 'SCSS/CSS'],
         link: 'https://www.ontario.ca/page/ministry-transportation'
     }, {
-        date: '2019 Jun - 2019 Sep',
-        jobTitle: 'Fullstack Engineer',
+        date: '2019 Jan - 2019 Aug',
+        jobTitle: 'Fullstack Developer',
         jobPosition: 'Co-Op Student, Part Timer',
         department: 'IT',
         employer: 'Emkompass',
