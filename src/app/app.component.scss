@@ -22,9 +22,12 @@
         }
     }
     @media only screen and (max-width: 999px) {
-        padding: 10px 30px;
-        .pdf-resume {
-            padding-bottom: 35px;
+        .left,
+        .right > .introduction,
+        .right > .pdf-resume,
+        .right > .about-portfolio
+         {
+            padding: 10px 30px;
         }
     }
     @media only screen and (max-width: 699px) {
@@ -34,17 +37,12 @@
                 padding-bottom: 20px;
             }
         }
-        .right {
-            .introduction {
-                padding: 20px 0 30px;
-            }
-        }
     }
     .left {
         display: flex;
         flex-direction: column;
         .name {
-            margin-bottom: 0;
+            padding: 10px 0;
         }
         .title {
             margin-top: 5px;

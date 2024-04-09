@@ -17,9 +17,18 @@
     }
     @media only screen and (max-width: 999px) {
         margin-bottom: 35px;
+        padding: 10px 30px;
     }
     @media only screen and (max-width: 699px) {
         margin-bottom: 55px;
+        .work-title {
+            display: flex;
+            flex-direction: column;
+        }
+        .center-dot,
+        .next-line {
+            display: none;
+        }
     }
     &:hover {
         cursor: default;

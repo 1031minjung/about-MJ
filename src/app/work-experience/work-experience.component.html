@@ -10,8 +10,11 @@
         <div class="work-title">
             <span class="job-title">{{data.jobTitle}}</span>
             <span class="center-dot">&#183;</span>
+            <span class="job-title">{{data.jobPosition}}</span>
+            <br class="next-line">
             <span class="department">{{data.department}}</span>
-            <br>
+            <span class="center-dot">&#183;</span>
+            
             <span class="employer" (click)="appService.openLink(data.link)" title="visit {{data.employer}}">{{data.employer}} <i class="bi bi-box-arrow-up-right"></i>
             </span>
         </div>
