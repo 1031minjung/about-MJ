@@ -24,7 +24,7 @@ import { NgxGoogleAnalyticsModule } from 'ngx-google-analytics';
     AppRoutingModule,
     NgbModule,
     FormsModule,
-    NgxGoogleAnalyticsModule.forRoot('G-5N4FL2PCPL')
+    NgxGoogleAnalyticsModule.forRoot('G-YVMBQ079H2')
   ],
   providers: [AppService],
   bootstrap: [AppComponent]
