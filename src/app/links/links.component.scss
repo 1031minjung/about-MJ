@@ -13,7 +13,7 @@
     }
     .bi-moon-fill,
     .bi-sun-fill {
-        animation: blinker 4s linear infinite;
+        animation: blinker 4s linear 20;
         &:hover {
             animation-name: none;
         }
