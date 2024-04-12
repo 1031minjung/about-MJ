@@ -32,7 +32,7 @@ export const educationSummary = [
     {
         date: '2018 Jan - 2019 Dec',
         jobTitle: 'Computer Systems Analyst',
-        jobPosition: '6 Semesters including 2 co-op programs',
+        jobPosition: 'Computer Systems Technology Diploma',
         department: null,
         employer: 'Sheridan College',
         jobNote: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam voluptas voluptatum tempora dolore facere impedit deleniti perferendis, aspernatur, magni ullam recusandae, sint asperiores dolores minima qui officia harum quis tempore. ',
