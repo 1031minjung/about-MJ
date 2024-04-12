@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { jobSummary } from './summary';
+import { jobSummary, educationSummary } from './summary';
 import { AppService } from './app.service';
 
 @Component({
@@ -10,11 +10,13 @@ import { AppService } from './app.service';
 
 export class AppComponent implements OnInit {
   jobData: any;
+  educationData: any;
 
   constructor(public appService: AppService) {}
 
   ngOnInit() {
     this.jobData = jobSummary;
+    this.educationData = educationSummary;
   }
 
   openPdfResume() {

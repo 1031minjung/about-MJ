@@ -1,10 +1,11 @@
 .flex-display {
     display: flex;
-    padding-top: 10px;
-    @media only screen and (max-width: 599px) {
-        display: grid;
-        grid-template-columns: 110px 110px;
-        gap: 10px;
+    padding-top: 5px;
+    @media only screen and (max-width: 550px) {
+        display: flex;
+        flex-wrap: wrap;
+        line-height: 37px;
+        max-width: 230px;
     }
     .key-words {
         padding-right: 10px;
@@ -12,6 +13,7 @@
         .word {
             padding: 7px 11px;
             border-radius: 14px;
+            white-space: nowrap;
             &.dark-mode {
                 background: #62677a;
                 color: #9aeef9;

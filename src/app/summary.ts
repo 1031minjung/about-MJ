@@ -28,3 +28,15 @@ export const jobSummary = [
         link: 'https://www.enkompass.ca/'
     }
 ];
+export const educationSummary = [
+    {
+        date: '2018 Jan - 2019 Dec',
+        jobTitle: 'Computer Systems Analyst',
+        jobPosition: '6 Semesters including 2 co-op programs',
+        department: null,
+        employer: 'Sheridan College',
+        jobNote: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam voluptas voluptatum tempora dolore facere impedit deleniti perferendis, aspernatur, magni ullam recusandae, sint asperiores dolores minima qui officia harum quis tempore. ',
+        keywords: ['Java', 'Systems Analysis', 'Linux', 'SQL', 'Network'],
+        link: 'https://www.sheridancollege.ca/'
+    }
+]

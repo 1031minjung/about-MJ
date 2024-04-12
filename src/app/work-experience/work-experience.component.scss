@@ -8,6 +8,7 @@
     }
     @media only screen and (min-width: 700px) {
         display: flex;
+        margin-bottom: 25px;
         &.dark-mode:hover {
             background: #4e4e4e;
         }
@@ -16,11 +17,11 @@
         }
     }
     @media only screen and (max-width: 999px) {
-        margin-bottom: 35px;
+        
         padding: 10px 30px;
     }
     @media only screen and (max-width: 699px) {
-        margin-bottom: 55px;
+        margin-bottom: 30px;
         .work-title {
             display: flex;
             flex-direction: column;
@@ -38,7 +39,6 @@
         opacity: 0.6;
     }
     .right {
-        
         .work-title {
             opacity: 0.9;
         }

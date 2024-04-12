@@ -9,13 +9,13 @@
     <div class="right">
         <div class="work-title">
             <span class="job-title">{{data.jobTitle}}</span>
-            <span class="center-dot">&#183;</span>
+            <span class="center-dot" *ngIf="type === 'work'">&#183;</span>
+            <br class="next-line" *ngIf="type === 'edu'">
             <span class="job-title">{{data.jobPosition}}</span>
             <br class="next-line">
-            <span class="department">{{data.department}}</span>
-            <span class="center-dot">&#183;</span>
-            
-            <span class="employer" (click)="appService.openLink(data.link)" title="visit {{data.employer}}">{{data.employer}} <i class="bi bi-box-arrow-up-right"></i>
+            <span class="job-title" *ngIf="type === 'work'">{{data.department}}</span>
+            <span class="center-dot" *ngIf="type === 'work'">&#183;</span>
+            <span class="job-title" (click)="appService.openLink(data.link)" title="visit {{data.employer}}">{{data.employer}} <i class="bi bi-box-arrow-up-right"></i>
             </span>
         </div>
         <p class="job-note">{{data.jobNote}}</p>

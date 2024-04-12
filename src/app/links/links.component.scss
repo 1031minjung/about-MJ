@@ -1,15 +1,29 @@
 .links {
     display: flex;
+    @keyframes blinker {  
+        0% { opacity: 1.0; }
+        50% { opacity: 0.3; }
+        100% { opacity: 1.0; }
+    }
     @media only screen and (max-width: 999px) {
         padding: 20px 0 0;
     }
+    @media only screen and (max-width: 699px) {
+        padding: 20px 0 4px;
+    }
+    .bi-moon-fill,
+    .bi-sun-fill {
+        animation: blinker 4s linear infinite;
+        &:hover {
+            animation-name: none;
+        }
+    }
     & > div {
         padding-right: 10px;
-        opacity: 0.7;
+        opacity: 0.6;
         &:hover {
             cursor: pointer;
             opacity: 1;
         }
     }
-    
 }

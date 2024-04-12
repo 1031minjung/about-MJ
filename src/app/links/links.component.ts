@@ -40,7 +40,7 @@ export class LinksComponent {
   }
 
   openOldPortfolio() {
-    alert('Please note:\nA lot of projects are not available for live try in the this old portfolio since the projects were stored and have removed in the school system upon graduation. But you could still visit and view what student MJ has done in the past!');
+    alert('Please note:\nA lot of projects are not available for live try in this old portfolio since the projects had stored and have removed in the school system once I graduated. But you could still visit and view what student MJ has done in the past!');
     this.appService.openLink('https://minjungpark.site123.me/');
   }
 

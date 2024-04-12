@@ -6,10 +6,11 @@ import { AppService } from '../app.service';
   templateUrl: './work-experience.component.html',
   styleUrls: ['./work-experience.component.scss']
 })
-export class WorkExperienceComponent  {
+export class WorkExperienceComponent {
 
   constructor(public appService: AppService) {}
 
   @Input() data: any;
+  @Input() type: string;
 
 }
