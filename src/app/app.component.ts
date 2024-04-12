@@ -19,10 +19,6 @@ export class AppComponent implements OnInit {
     this.educationData = educationSummary;
   }
 
-  openPdfResume() {
-    window.open("assets/resume.pdf")
-  }
-
   toggleDisplay(event: Event) {
     if (event) {
       this.appService.displayMode = 'dark'

@@ -22,6 +22,10 @@ export class LinksComponent {
   ngOnInit() {
   }
 
+  openPdfResume() {
+    window.open("assets/resume.pdf")
+  }
+
   openModal() {
     const modalRef = this.modalService.open(EmailDialogComponent, { centered: true });
     modalRef.result.then((result) => {
