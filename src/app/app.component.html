@@ -15,14 +15,14 @@
 
     <h4 class="section-title">WORK EXPERIENCES</h4>
     <span *ngFor="let data of jobData">
-      <app-work-experience [data]="data" [type]="'work'">
-      </app-work-experience>
+      <app-experience [data]="data" [type]="'work'">
+      </app-experience>
     </span>
 
     <h4 class="section-title">EDUCATION</h4>
     <span *ngFor="let data of educationData">
-      <app-work-experience [data]="data" [type]="'edu'">
-      </app-work-experience>
+      <app-experience [data]="data" [type]="'edu'">
+      </app-experience>
     </span>
 
     <h4 class="section-title">PROJECTS</h4>

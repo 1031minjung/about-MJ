@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { WorkExperienceComponent } from './work-experience/work-experience.component';
+import { ExperienceComponent } from './experience/experience.component';
 import { KeyWordComponent } from './key-word/key-word.component';
 import { LinksComponent } from './links/links.component';
 import { AppService } from './app.service';
@@ -14,7 +14,7 @@ import { NgxGoogleAnalyticsModule } from 'ngx-google-analytics';
 @NgModule({
   declarations: [
     AppComponent,
-    WorkExperienceComponent,
+    ExperienceComponent,
     KeyWordComponent,
     LinksComponent,
     EmailDialogComponent
