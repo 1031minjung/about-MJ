@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+import { EmailService } from './email.service'
 
 @Component({
   selector: 'app-email-dialog',
@@ -8,25 +9,33 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 })
 export class EmailDialogComponent {
 
-  emailStatus = null;
-  errorMessage = null;
-  successMessage = null;
+  emailStatus: string;
+  errorMessage: string;
+  successMessage: string;
 
   constructor(
-    public activeModal: NgbActiveModal
+    public activeModal: NgbActiveModal,
+    private emailService: EmailService
   ) { }
 
-  ngOnInit() {
-    console.log("email Dialog Open");
+
+
+  sendEmailToMJ(emailAddress: string, emailMessage: string) {
+    this.emailService.sendEmail({ 
+      to_email: emailAddress, 
+      subject: 'hallo', 
+      message: emailMessage + '\n\n from ' + emailAddress })
+      .then(_ => {
+        this.emailStatus = 'successful'
+        this.successMessage = 'The email has been sent successfully!';
+        setTimeout(() => {
+          this.activeModal.close();
+        }, 5000);
+      })
+      .catch(_ => {
+        this.emailStatus = 'fail'
+        this.errorMessage = 'Sorry, something went wrong.'
+      });
   }
 
-  sendEmailToMJ() {
-    console.log("*** sendEmailToMJ()")
-    this.activeModal.close();
-  }
-
-  submitForm() {
-    console.log("*** submitForm()")
-    this.activeModal.close();
-  }
 }

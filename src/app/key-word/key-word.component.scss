@@ -1,11 +1,16 @@
 .flex-display {
     display: flex;
     padding-top: 5px;
+    flex-wrap: wrap;
+    line-height: 37px;
+    @media only screen and (min-width: 1000px) {
+        max-width: 500px;
+    }
+    @media only screen and (max-width: 999px) {
+        max-width: 700px;
+    }
     @media only screen and (max-width: 550px) {
-        display: flex;
-        flex-wrap: wrap;
-        line-height: 37px;
-        max-width: 230px;
+        max-width: 400px;
     }
     .key-words {
         padding-right: 10px;

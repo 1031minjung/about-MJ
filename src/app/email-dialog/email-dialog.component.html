@@ -8,12 +8,12 @@
     <div class="modal-body input-group">
         <div>
             <span class="body-label" for="emailAddress"><label>Email</label></span>
-            <input type="email" name="emailAddress" id="emailAddress" class="form-control"
+            <input #emailAddress type="email" name="emailAddress" id="emailAddress" class="form-control"
                 placeholder="Please enter your email address">
         </div>
         <div>
             <span class="body-label" for="emailMessage"><label>Message</label></span>
-            <textarea name="emailMessage" id="emailMessage" class="form-control email-message">
+            <textarea #emailMessage name="emailMessage" id="emailMessage" class="form-control email-message">
             </textarea>
         </div>
     </div>
@@ -24,7 +24,7 @@
         </div>
         <div class="buttons">
             <span class="cancel-button" (click)="activeModal.close()">Cancel</span>
-            <h1 type="submit" (click)="sendEmailToMJ()" class="bi submit-button"
+            <h1 type="submit" (click)="sendEmailToMJ(emailAddress.value, emailMessage.value)" class="bi submit-button"
             [ngClass]="{
                 'bi-envelope-check-fill success': emailStatus === 'successful',
                 'bi-envelope-exclamation-fill fail': emailStatus === 'fail',

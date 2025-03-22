@@ -21,7 +21,7 @@
     .modal-custom-footer {
         display: flex;
         justify-content: space-between;
-        padding: 0px 22px 10px;
+        padding: 0px 14px 10px;
         .messages {
             padding-top: 13px;
             .error-message {
@@ -37,6 +37,11 @@
             flex-wrap: wrap;
             align-items: center;
             justify-content: flex-end;
+            opacity: 0.6;
+            &:hover {
+                opacity: 1;
+            }
+
             .cancel-button:hover {
                 cursor: pointer;
                 text-decoration: underline;
