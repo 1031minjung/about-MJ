@@ -1,36 +1,74 @@
 <div class="email-dialog">
     <div class="modal-header">
         <h4 class="modal-title" id="modal-basic-title">Send MJ an email</h4>
-        <button type="button" class="close" aria-label="Close" (click)="activeModal.close()">
+        <button
+            type="button"
+            class="close"
+            aria-label="Close"
+            (click)="activeModal.close()">
             <span aria-hidden="true">&times;</span>
         </button>
     </div>
     <div class="modal-body input-group">
         <div>
-            <span class="body-label" for="emailAddress"><label>Email</label></span>
-            <input #emailAddress type="email" name="emailAddress" id="emailAddress" class="form-control"
-                placeholder="Please enter your email address">
+            <span 
+                class="body-label"
+                for="emailAddress">
+                <label>Email</label>
+            </span>
+            <input 
+                #emailAddress
+                type="email"
+                name="emailAddress"
+                id="emailAddress"
+                class="form-control"
+                placeholder="Please enter your email address"
+                (blur)="isValidEmail(emailAddress.value)">
         </div>
         <div>
-            <span class="body-label" for="emailMessage"><label>Message</label></span>
-            <textarea #emailMessage name="emailMessage" id="emailMessage" class="form-control email-message">
+            <span 
+                class="body-label"
+                for="emailMessage">
+                <label>Message</label>
+            </span>
+            <textarea 
+                #emailMessage
+                name="emailMessage"
+                id="emailMessage"
+                class="form-control email-message">
             </textarea>
         </div>
     </div>
+    <div>{{errorMessage}}</div>
     <div class="modal-custom-footer">
         <div class="messages" >
-            <span class="error-message" *ngIf="errorMessage"><i class="bi bi-emoji-frown"></i> {{errorMessage}}</span>
-            <span class="success-message" *ngIf="successMessage"><i class="bi bi-emoji-smile"></i> {{successMessage}}</span>
+            <span 
+                class="error-message"
+                *ngIf="errorMessage !== ''">
+                <i class="bi bi-emoji-frown"></i>
+                {{errorMessage}}
+            </span>
+            <span
+                class="success-message"
+                *ngIf="successMessage">
+                <i class="bi bi-emoji-smile"></i> {{successMessage}}
+            </span>
         </div>
         <div class="buttons">
-            <span class="cancel-button" (click)="activeModal.close()">Cancel</span>
-            <h1 type="submit" (click)="sendEmailToMJ(emailAddress.value, emailMessage.value)" class="bi submit-button"
-            [ngClass]="{
+            <span
+                class="cancel-button"
+                (click)="activeModal.close()">Cancel
+            </span>
+            <h1 
+                type="submit"
+                (click)="sendEmailToMJ(emailAddress.value, emailMessage.value)"
+                class="bi submit-button"
+                [ngClass]="{
                 'bi-envelope-check-fill success': emailStatus === 'successful',
                 'bi-envelope-exclamation-fill fail': emailStatus === 'fail',
-                'bi-envelope-arrow-up': !emailStatus
-            }"></h1>
+                'bi-envelope-arrow-up': !emailStatus,
+                'disabled': !isEmailValid}">
+            </h1>
         </div>
-        
     </div>
 </div>

@@ -10,15 +10,14 @@ import { EmailService } from './email.service'
 export class EmailDialogComponent {
 
   emailStatus: string;
-  errorMessage: string;
+  errorMessage = '';
   successMessage: string;
+  isEmailValid: boolean;
 
   constructor(
     public activeModal: NgbActiveModal,
     private emailService: EmailService
   ) { }
-
-
 
   sendEmailToMJ(emailAddress: string, emailMessage: string) {
     this.emailService.sendEmail({ 
@@ -36,6 +35,17 @@ export class EmailDialogComponent {
         this.emailStatus = 'fail'
         this.errorMessage = 'Sorry, something went wrong.'
       });
+  }
+
+  isValidEmail(emailAddress: string) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (emailRegex.test(emailAddress)) {
+      this.errorMessage = '';
+      this.isEmailValid = true;
+    } else {
+      this.errorMessage = 'Invalid Email Address';
+      this.isEmailValid = false;
+    }
   }
 
 }

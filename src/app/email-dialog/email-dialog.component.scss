@@ -41,7 +41,6 @@
             &:hover {
                 opacity: 1;
             }
-
             .cancel-button:hover {
                 cursor: pointer;
                 text-decoration: underline;
@@ -62,6 +61,11 @@
             }
             .cancel-button {
                 padding: 0 12px 7px;
+            }
+            .disabled {
+                color: grey;
+                pointer-events: none;
+                opacity: 0.6;
             }
         }
     }
